@@ -48,4 +48,5 @@ int main(){
         cout<<reversed_array[i]<<" ";
     }
 
+    return 0;
 }
