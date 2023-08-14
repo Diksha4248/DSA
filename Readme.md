@@ -31,5 +31,10 @@ This repository includes basic Data Structure Algorithms and concepts
 
 
 * Linked List
+    1) Insertion
+    2) Traversal
+    3) Searching 
+    4) Deletion
+    5) Count the number of nodes
     
 
