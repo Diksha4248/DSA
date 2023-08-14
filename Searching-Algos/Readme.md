@@ -13,12 +13,12 @@ Time Complexity : O(N)
 
 Two Approaches:
 
-1) Iterative :
-     Time Complexity : O(log N)
-     Auxiliary Space: O(1)
-2) Recursive :
-    Time Complexity: O(log N)
-    Auxiliary Space: O(1), If the recursive call stack is considered then the auxiliary space will be O(logN).
+1) Iterative : <br>
+     Time Complexity : O(log N) <br>
+     Auxiliary Space: O(1) <br>
+2) Recursive : <br>
+    Time Complexity: O(log N) <br>
+    Auxiliary Space: O(1), If the recursive call stack is considered then the auxiliary space will be O(logN). <br>
 
 ## Ternary Search    
 
