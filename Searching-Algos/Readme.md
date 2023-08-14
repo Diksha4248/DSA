@@ -28,6 +28,8 @@ It is similar to binary search where we divide the array into two parts but in t
 
 It is same as the binary search. The only difference is that, it reduces the time complexity a bit more. the algorithm involves ‘N’ steps. The searchable range would be the size = 3^N. Inversely, the number of steps needed to find the element is the log of the size of the collection. So the runtime is O(log N base 3).
 
-The time complexity for ternary search is O (log N base 3 ) on average.
+Time Complexity:
 
-Best case time complexity is O(1), and worst-case complexity is O (log N base 3).
+1) Average Case : O (log N base 3)
+2) Best Case : O(1)
+3) Worst Case : O (log N base 3)
