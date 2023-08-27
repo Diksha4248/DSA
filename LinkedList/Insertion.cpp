@@ -3,8 +3,7 @@ using namespace std;
 
 
 class node{
-    public:
-    
+    public: 
     int data;
     node *next;
 
@@ -15,6 +14,8 @@ class node{
 
 };
 
+// Insertion at the end of the linked list
+
 void Insert_at_end(node* &head, int val){
 
     node* n = new node(val);
@@ -24,30 +25,40 @@ void Insert_at_end(node* &head, int val){
     }
 
     node* temp = head;
-    while(temp!=NULL){
+    while(temp->next!=NULL){
         temp = temp->next;
     }
 
     temp->next = n;
 }
 
-void display(node * head){
+// Insertion at the beginning of the linked list
+void Insert_at_start(node* &head,int val){
+    node* n=new node(val);
+    n->next=head;
+    head=n;
+}
+
+
+void display(node *head){
     node* temp = head;
     while(temp!=NULL){
-        cout<<temp->data<<" ";
+        cout<<temp->data<<"->";
         temp = temp->next;
     }
 
-    cout<<endl;
+    cout<<"NULL"<<endl;
 }
 
 
 int main(){
 
-    node * head = NULL;
+    node *head = NULL;
     Insert_at_end(head,1);
     Insert_at_end(head,2);
     Insert_at_end(head,3);
+    display(head);
+    Insert_at_start(head,88);
     display(head);
     
     return 0;
