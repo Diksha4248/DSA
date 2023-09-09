@@ -7,10 +7,11 @@ class node{
     int data;
     node *next;
 
-    node(int val){
-        data = val;
-        next = NULL;
-    }    
+    // node(int val){
+    //     data = val;
+    //     next = NULL;
+    // }   
+    node(int val): data(val), next(NULL){} 
 
 };
 
