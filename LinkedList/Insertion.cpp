@@ -7,11 +7,10 @@ class node{
     int data;
     node *next;
 
-    // node(int val){
-    //     data = val;
-    //     next = NULL;
-    // }   
-    node(int val): data(val), next(NULL){} 
+    node(int val){
+        data = val;
+        next = NULL;
+    }   
 
 };
 
@@ -41,6 +40,42 @@ void Insert_at_start(node* &head,int val){
 }
 
 
+//Insertion before a given position
+void insert_before_node(node* &head, int val,int pos){
+    // node *p,*a = head;
+    node * n = new node(val);
+    node * temp = head;
+
+    // if(head->data == ele){
+    //     temp->next = head;
+    //     head = temp;
+    // }
+
+    // else{
+    //     a = p->next;
+    //     while((p->next)->data != ele){
+    //         p = p->next;
+    //         a = a->next;
+    //     }
+
+    //     temp->next = a;
+    //     p->next = temp;
+    // }
+
+    if(head == NULL){
+        n = head;
+    }
+
+    int i = 1;
+    while(i<pos){
+        temp = temp->next;
+        i=i+1;
+    }
+
+    n->next = temp->next;
+    temp->next = n;
+}
+
 void display(node *head){
     node* temp = head;
     while(temp!=NULL){
@@ -60,6 +95,9 @@ int main(){
     Insert_at_end(head,3);
     display(head);
     Insert_at_start(head,88);
+    display(head);
+
+    insert_before_node(head,99,3);
     display(head);
     
     return 0;
