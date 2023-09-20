@@ -30,19 +30,15 @@ void display(node *head){
     cout<<"NULL"<<endl;
 }
 
-void search(node * &head, int ele){
+bool search(node * &head, int ele){
     node *temp = head;
-    while(temp->data != ele){
-        temp = temp->next;
-    }
+    while(temp->next != NULL){
+        if(temp->data == ele) return true;
+        temp = temp->next;    
+        }
 
-    if(temp-> data == ele){
-         cout<<"Element found"<<endl;
-          cout<<"here";
-    }
-    else {
-        cout<<"Element not found"<<endl;
-    }
+    if(temp->next == NULL && temp->data == ele) return true;    // or directly use while(temp!= NULL) in the above code to avoid writing this line
+    else return false;
 }
 int main(){
 
@@ -52,7 +48,7 @@ int main(){
     Insert_at_start(head,1);
     display(head);
 
-    search(head,3);
-    search(head,99);   // why this is not giving result ???
+    cout<<search(head,3);
+    cout<<search(head,99);  
     return 0;
 }
